@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Log;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\RichEditor;
+use Broqit\FilamentEditorJs\Forms\Components\EditorJs;
 use Jiten14\JitoneAi\Forms\Actions\GenerateContentAction;
 use Jiten14\JitoneAi\Services\OpenAIService;
 use Jiten14\JitoneAi\Services\ImageGenerationService;
@@ -42,6 +43,7 @@ class JitoneAiServiceProvider extends PackageServiceProvider
         $this->registerWithAIMacro(TextInput::class);
         $this->registerWithAIMacro(Textarea::class);
         $this->registerWithAIMacro(RichEditor::class);
+        $this->registerWithAIMacro(EditorJs::class);
 
         $this->checkDependencies();
     }
